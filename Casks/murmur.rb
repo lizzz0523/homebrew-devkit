@@ -13,14 +13,16 @@ cask "murmur" do
   end
 
   name "Murmur"
-  desc "本地语音输入工具（按住说话，识别并润色后粘贴）"
+  desc "Local on-device voice input for macOS"
   homepage "https://github.com/lizzz0523/murmur"
   app "Murmur.app"
 
   caveats <<~EOS
-    Murmur 为 ad-hoc 签名版本。若首次打开被系统拦截，执行：
+    Murmur is ad-hoc signed (not notarized). If macOS blocks the first launch, run:
       xattr -dr com.apple.quarantine /Applications/Murmur.app
-    或在「系统设置 → 隐私与安全性」中点击「仍要打开」。
-    使用前还需在「隐私与安全性」中授予：麦克风、输入监控、辅助功能。
+    or click "Open Anyway" in System Settings -> Privacy & Security.
+
+    You must also grant Microphone, Input Monitoring, and Accessibility
+    permissions in System Settings -> Privacy & Security before use.
   EOS
 end
