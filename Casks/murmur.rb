@@ -1,9 +1,7 @@
 cask "murmur" do
-  # version/sha256 由 murmur 仓库的 release workflow 在打 tag 后自动刷新。
-  # 下列值为首次发布前的占位，首次 v* tag 发布后会被真实值覆盖。
   version "0.1.0"
-  sha256 arm:   "0000000000000000000000000000000000000000000000000000000000000000",
-         intel: "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 arm:   "c471ed16f590021de589f75937851d1d3f1b92b7ed01086cd16cedd9901ff69f",
+         intel: "36fa33695eced4a3962f77f738dfd467c66b9ff81943efb2c00e206fdc199445"
 
   on_arm do
     url "https://github.com/lizzz0523/murmur/releases/download/v" + version + "/murmur-aarch64-apple-darwin.zip"
